@@ -10,8 +10,13 @@ export default function Navigation() {
           background: "linear-gradient(0deg, rgba(12, 13, 15, 0.90) 0%, rgba(12, 13, 15, 0.90) 100%)"
         }}
       >
-        {/* Left Navigation - Hidden on mobile */}
-        <div className="hidden lg:flex items-center gap-4">
+        {/* Logo - Left */}
+        <div className="flex-shrink-0">
+          <span className="text-base md:text-lg font-ethnocentric text-white tracking-wide">Specurity</span>
+        </div>
+
+        {/* Center Navigation - Hidden on mobile */}
+        <div className="hidden lg:flex items-center gap-4 flex-1 justify-center">
           <Link to="/" className="px-2 py-3 rounded-md hover:bg-white/5 transition-colors">
             <span className="text-sm font-medium text-brand-gray">Our Services</span>
           </Link>
@@ -26,13 +31,8 @@ export default function Navigation() {
           </Link>
         </div>
 
-        {/* Logo */}
-        <div className="lg:absolute lg:left-1/2 lg:-translate-x-1/2">
-          <span className="text-base md:text-lg font-ethnocentric text-white tracking-wide">Specurity</span>
-        </div>
-
-        {/* Right Navigation */}
-        <div className="flex items-center gap-3 md:gap-6">
+        {/* Right Navigation - Action buttons */}
+        <div className="flex items-center gap-3 md:gap-6 flex-shrink-0">
           <Link to="/" className="hidden md:block px-2 py-3 rounded-md hover:bg-white/5 transition-colors">
             <span className="text-sm font-medium text-brand-gray">Get In Touch</span>
           </Link>
