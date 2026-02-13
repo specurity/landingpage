@@ -57,6 +57,29 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        brand: {
+          blue: {
+            DEFAULT: "#0055FF",
+            light: "#0076FF",
+            dark: "#143CA3",
+            darker: "#0A1030",
+          },
+          red: {
+            DEFAULT: "#FF6363",
+            light: "#F5306B",
+          },
+          gray: {
+            DEFAULT: "#9C9C9D",
+            light: "#EFEDFD",
+            dark: "#6A6B6C",
+            darker: "#434345",
+          },
+          dark: {
+            DEFAULT: "#07080A",
+            card: "#0C0D0F",
+            border: "rgba(255, 255, 255, 0.1)",
+          }
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -84,6 +107,12 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
+        'ethnocentric': ['Ethnocentric', 'sans-serif'],
+        'roboto-mono': ['Roboto Mono', 'monospace'],
+        'inter': ['Inter', 'sans-serif'],
       },
     },
   },
