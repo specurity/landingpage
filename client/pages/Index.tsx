@@ -5,6 +5,7 @@ import Partners from "@/components/Partners";
 import MissionFeatures from "@/components/MissionFeatures";
 import AIFeatures from "@/components/AIFeatures";
 import Leadership from "@/components/Leadership";
+import Team from "@/components/Team";
 import Hiring from "@/components/Hiring";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
