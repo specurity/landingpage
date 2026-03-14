@@ -27,7 +27,7 @@ const missionCards = [
 
 export default function MissionFeatures() {
   return (
-    <section className="relative py-24 px-8 bg-[#07080A]">
+    <section className="relative pt-24 pb-[116px] px-8 bg-[#07080A]">
       <div className="max-w-[1200px] mx-auto">
         {/* Section Badge */}
         <div className="flex justify-center mb-16">
