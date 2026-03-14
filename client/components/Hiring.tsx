@@ -1,3 +1,18 @@
+const blinkingDotStyle = `
+  @keyframes blink {
+    0%, 49% {
+      opacity: 1;
+    }
+    50%, 100% {
+      opacity: 0.3;
+    }
+  }
+
+  .blinking-dot {
+    animation: blink 1.5s infinite;
+  }
+`;
+
 export default function Hiring() {
   const jobs = [
     {
@@ -15,12 +30,15 @@ export default function Hiring() {
   ];
 
   return (
-    <section className="relative py-32 px-8">
+    <>
+      <style>{blinkingDotStyle}</style>
+      <section className="relative py-32 px-8">
       <div className="max-w-[1000px] mx-auto">
         {/* Section Header */}
         <div className="flex flex-col items-center gap-5 mb-16 max-w-[582px] mx-auto">
           {/* Hiring Badge */}
-          <div className="inline-flex items-center px-6 py-2 rounded-full border border-white/20 bg-white">
+          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-white/20 bg-white">
+            <div className="blinking-dot" style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#0A0A0A" }}></div>
             <span
               className="text-[#0A0A0A] font-inter font-semibold tracking-widest uppercase"
               style={{
@@ -94,5 +112,6 @@ export default function Hiring() {
         </div>
       </div>
     </section>
+    </>
   );
 }
