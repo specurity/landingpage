@@ -42,8 +42,8 @@ export default function Leadership() {
                 style={{
                   width: "823px",
                   height: "614px",
-                  left: "-135px",
                   top: "-43px",
+                  border: "1px solid rgba(255, 255, 255, 0.1)",
                 }}
               />
               {/* Subtle overlay */}
