@@ -20,37 +20,16 @@ export default function Hiring() {
         {/* Section Header */}
         <div className="flex flex-col items-center gap-5 mb-16 max-w-[582px] mx-auto">
           {/* Hiring Badge */}
-          <div 
-            className="relative flex items-center h-12"
+          <div
+            className="inline-flex items-center px-5 py-2 rounded-full"
             style={{
-              background: "radial-gradient(50% 13.65% at 50% 50%, rgba(245, 48, 107, 0.10) 0%, rgba(255, 103, 167, 0.00) 100%)",
+              border: "1px solid rgba(255, 255, 255, 0.18)",
+              background: "transparent",
             }}
           >
-            <svg width="272" height="2" viewBox="0 0 272 2" fill="none" className="shrink-0">
-              <path d="M272 1.00002L0.5 1" stroke="url(#paint0_linear_hiring)" />
-              <defs>
-                <linearGradient id="paint0_linear_hiring" x1="272.5" y1="1.49877" x2="0.500002" y2="0.999173" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#ECA5A7"/>
-                  <stop offset="0.165137" stopColor="#581D27"/>
-                  <stop offset="1" stopColor="#190E14"/>
-                </linearGradient>
-              </defs>
-            </svg>
-
-            <div className="px-3">
-              <span className="text-sm font-medium text-brand-red">We're Hiring</span>
-            </div>
-
-            <svg width="272" height="2" viewBox="0 0 272 2" fill="none" className="shrink-0">
-              <path d="M0 1H271.5" stroke="url(#paint1_linear_hiring)" />
-              <defs>
-                <linearGradient id="paint1_linear_hiring" x1="0" y1="1" x2="272" y2="1" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#ECA5A7"/>
-                  <stop offset="0.165137" stopColor="#581D27"/>
-                  <stop offset="1" stopColor="#190E14"/>
-                </linearGradient>
-              </defs>
-            </svg>
+            <span className="font-inter text-sm font-medium text-white tracking-wide uppercase">
+              We're Hiring
+            </span>
           </div>
 
           <div className="text-center max-w-[438px]">
