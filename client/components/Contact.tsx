@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "#07080A" }}
+      style={{ backgroundColor: "#07080A" }}
     >
       {/* Full-section grid image with radial gradient mask (fades to dark at edges, visible in center) */}
       <div
