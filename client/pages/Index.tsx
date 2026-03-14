@@ -21,6 +21,7 @@ export default function Index() {
         <MissionFeatures />
         <AIFeatures />
         <Leadership />
+        <Team />
         <Hiring />
         <Contact />
       </main>

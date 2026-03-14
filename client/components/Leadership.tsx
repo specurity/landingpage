@@ -1,6 +1,6 @@
 export default function Leadership() {
   return (
-    <section className="relative py-24 px-8 overflow-hidden">
+    <section className="relative py-24 px-8 overflow-hidden bg-[#07080A]">
       <div className="max-w-[1204px] mx-auto">
         <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-0">
           {/* Left: Photo */}
