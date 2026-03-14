@@ -65,7 +65,7 @@ export default function Contact() {
           src="https://cdn.builder.io/api/v1/image/assets%2F766559904cb240c09cbbee0e5843aa34%2F5cd21d08fdab44ff94d3acefdbcac864?format=webp&width=1400"
           alt=""
           className="w-full h-full object-cover object-top"
-          style={{ opacity: 1 }}
+          style={{ opacity: 1, position: "sticky" }}
         />
       </div>
 
