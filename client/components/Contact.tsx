@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Button } from "./ui/button";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     company: "",
-    message: ""
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -15,123 +15,218 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative py-32 px-8">
-      <div className="max-w-[680px] mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <div 
-            className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full text-xs font-medium"
-            style={{
-              background: "#143CA3",
-              boxShadow: "0 0 20px 0 rgba(245, 48, 107, 0.10)",
-            }}
+    <section
+      className="relative overflow-hidden"
+      style={{
+        background: "#F5F6FA",
+      }}
+    >
+      {/* Blue radial glow at top */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none"
+        style={{
+          width: "900px",
+          height: "500px",
+          background:
+            "radial-gradient(ellipse 60% 70% at 50% 0%, rgba(100, 130, 255, 0.55) 0%, rgba(180, 200, 255, 0.25) 45%, transparent 70%)",
+          filter: "blur(32px)",
+        }}
+      />
+
+      <div className="relative z-10 max-w-[800px] mx-auto px-6 pt-24 pb-20 text-center">
+        {/* Heading */}
+        <h2
+          className="font-space-grotesk font-bold text-white mb-4 leading-tight"
+          style={{ fontSize: "clamp(36px, 6vw, 64px)" }}
+        >
+          Ready to Design Smarter?
+        </h2>
+
+        {/* Subtitle */}
+        <p
+          className="font-inter text-white/60 mb-10 max-w-[480px] mx-auto"
+          style={{ fontSize: "16px", lineHeight: "1.6" }}
+        >
+          Whether you're a freelancer, a team, or a growing agency—our tools
+          adapt to your workflow. Design faster. Deliver better.
+        </p>
+
+        {/* Get Started Button */}
+        <a
+          href="#contact-form"
+          className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-inter font-semibold text-white transition-opacity hover:opacity-90 mb-16"
+          style={{
+            background: "#1560FF",
+            fontSize: "16px",
+          }}
+        >
+          Get Started
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <div className="px-2 py-0.5 rounded-full bg-[#0A1030] flex items-center gap-1.5">
-              <svg width="4" height="4" viewBox="0 0 4 4" fill="none">
-                <circle cx="2" cy="2" r="2" fill="#143CA3"/>
-              </svg>
-              <span className="text-white">Project Sold Out</span>
+            <path
+              d="M3.75 9H14.25M14.25 9L10.5 5.25M14.25 9L10.5 12.75"
+              stroke="white"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </a>
+
+        {/* Contact Form Card */}
+        <div
+          id="contact-form"
+          className="rounded-2xl p-8 text-left"
+          style={{
+            background: "#111216",
+            boxShadow: "0 24px 80px rgba(0,0,0,0.25)",
+          }}
+        >
+          <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Row 1: Name & Email */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label
+                  className="block font-inter text-white/70 mb-2"
+                  style={{ fontSize: "13px" }}
+                >
+                  Name*
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Your name"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  className="w-full px-4 py-3 rounded-xl font-inter text-white placeholder:text-white/20 focus:outline-none focus:ring-1 focus:ring-[#1560FF] transition-all"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.10)",
+                    fontSize: "14px",
+                  }}
+                />
+              </div>
+              <div>
+                <label
+                  className="block font-inter text-white/70 mb-2"
+                  style={{ fontSize: "13px" }}
+                >
+                  Email*
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="you@company.com"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                  className="w-full px-4 py-3 rounded-xl font-inter text-white placeholder:text-white/20 focus:outline-none focus:ring-1 focus:ring-[#1560FF] transition-all"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.10)",
+                    fontSize: "14px",
+                  }}
+                />
+              </div>
             </div>
-          </div>
 
-          <h2 className="text-3xl md:text-4xl font-space-grotesk font-semibold text-white mb-4">
-            Let's Build the Future Together
-          </h2>
-        </div>
+            {/* Row 2: Contact number & Company name */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label
+                  className="block font-inter text-white/70 mb-2"
+                  style={{ fontSize: "13px" }}
+                >
+                  Contact number*
+                </label>
+                <input
+                  type="tel"
+                  required
+                  placeholder="+1"
+                  value={formData.phone}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone: e.target.value })
+                  }
+                  className="w-full px-4 py-3 rounded-xl font-inter text-white placeholder:text-white/20 focus:outline-none focus:ring-1 focus:ring-[#1560FF] transition-all"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.10)",
+                    fontSize: "14px",
+                  }}
+                />
+              </div>
+              <div>
+                <label
+                  className="block font-inter text-white/70 mb-2"
+                  style={{ fontSize: "13px" }}
+                >
+                  Company name*
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Technology PVT."
+                  value={formData.company}
+                  onChange={(e) =>
+                    setFormData({ ...formData, company: e.target.value })
+                  }
+                  className="w-full px-4 py-3 rounded-xl font-inter text-white placeholder:text-white/20 focus:outline-none focus:ring-1 focus:ring-[#1560FF] transition-all"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.10)",
+                    fontSize: "14px",
+                  }}
+                />
+              </div>
+            </div>
 
-        {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name & Email Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Message */}
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-brand-gray-light mb-2">
-                Name*
+              <label
+                className="block font-inter text-white/70 mb-2"
+                style={{ fontSize: "13px" }}
+              >
+                Message*
               </label>
-              <input
-                type="text"
-                id="name"
+              <textarea
                 required
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white placeholder:text-brand-gray focus:outline-none focus:ring-2 focus:ring-brand-blue transition-all"
-                placeholder="Enter your name"
+                rows={5}
+                placeholder="Leave us a message..."
+                value={formData.message}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
+                className="w-full px-4 py-3 rounded-xl font-inter text-white placeholder:text-white/20 focus:outline-none focus:ring-1 focus:ring-[#1560FF] transition-all resize-none"
+                style={{
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.10)",
+                  fontSize: "14px",
+                }}
               />
             </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-brand-gray-light mb-2">
-                Email*
-              </label>
-              <input
-                type="email"
-                id="email"
-                required
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white placeholder:text-brand-gray focus:outline-none focus:ring-2 focus:ring-brand-blue transition-all"
-                placeholder="Enter your email"
-              />
+
+            {/* Submit */}
+            <div className="flex justify-center pt-2">
+              <button
+                type="submit"
+                className="px-8 py-3 rounded-full font-inter font-semibold text-white transition-opacity hover:opacity-90"
+                style={{
+                  background: "#1560FF",
+                  fontSize: "15px",
+                }}
+              >
+                Send Message
+              </button>
             </div>
-          </div>
-
-          {/* Company Name */}
-          <div>
-            <label htmlFor="company" className="block text-sm font-medium text-brand-gray-light mb-2">
-              Company Name*
-            </label>
-            <input
-              type="text"
-              id="company"
-              required
-              value={formData.company}
-              onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-              className="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white placeholder:text-brand-gray focus:outline-none focus:ring-2 focus:ring-brand-blue transition-all"
-              placeholder="Enter company name"
-            />
-          </div>
-
-          {/* Message */}
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-brand-gray-light mb-2">
-              Message*
-            </label>
-            <textarea
-              id="message"
-              required
-              rows={6}
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 text-white placeholder:text-brand-gray focus:outline-none focus:ring-2 focus:ring-brand-blue transition-all resize-none"
-              placeholder="Tell us about your project"
-            />
-          </div>
-
-          {/* Privacy Notice */}
-          <div className="flex items-start gap-3">
-            <input
-              type="checkbox"
-              id="privacy"
-              required
-              className="mt-1 w-4 h-4 rounded border-white/10 bg-white/5 text-brand-blue focus:ring-brand-blue"
-            />
-            <label htmlFor="privacy" className="text-sm text-brand-gray">
-              By submitting this form, you agree to our privacy policy and consent to being contacted about your inquiry.
-            </label>
-          </div>
-
-          {/* Submit Button */}
-          <Button 
-            type="submit"
-            className="w-full py-6 text-base font-semibold bg-brand-red hover:bg-brand-red-light transition-colors rounded-lg"
-          >
-            Submit Message
-          </Button>
-        </form>
-
-        {/* Footer Links */}
-        <div className="flex flex-wrap justify-center items-center gap-4 mt-12 text-sm text-brand-gray">
-          <span>Or write to us: hello@specurity.io</span>
-          <span>•</span>
-          <a href="#" className="hover:text-white transition-colors">Blog</a>
+          </form>
         </div>
       </div>
     </section>
