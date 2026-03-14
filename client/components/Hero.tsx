@@ -2,7 +2,7 @@ import { Flame } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-40 md:pt-48 lg:pt-56 pb-32">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-56 pb-32">
       {/* Blue glow effect */}
       <div className="absolute inset-0 pointer-events-none">
         <div 

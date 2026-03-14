@@ -6,7 +6,7 @@ export default function Partners() {
   ];
 
   return (
-    <section className="relative py-24 px-8">
+    <section className="relative py-[10px] px-8">
       <div className="max-w-[1216px] mx-auto">
         {/* Social Proof Badge */}
         <div className="flex justify-center mb-16">
