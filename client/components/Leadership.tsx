@@ -1,7 +1,27 @@
 export default function Leadership() {
   return (
     <section className="relative py-24 px-8 overflow-hidden bg-[#07080A]">
-      <div className="max-w-[1204px] mx-auto">
+      {/* Gradient glow at top — matches Figma design */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "100%",
+          maxWidth: "1440px",
+          height: "560px",
+          zIndex: 0,
+        }}
+      >
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F766559904cb240c09cbbee0e5843aa34%2F5cd21d08fdab44ff94d3acefdbcac864?format=webp&width=1440"
+          alt=""
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-[1204px] mx-auto">
         <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-0">
           {/* Left: Photo */}
           <div className="w-full lg:w-[553px] shrink-0">
