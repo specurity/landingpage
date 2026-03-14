@@ -25,7 +25,14 @@ export default function Contact() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "#07080A" }}
+      style={{
+        background: "#07080A",
+        backgroundImage:
+          "url(https://cdn.builder.io/api/v1/image/assets%2F766559904cb240c09cbbee0e5843aa34%2Ff2b000152a864b3ea36cf3f326ddd7f7)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
     >
       {/* Grid background image with radial gradient mask */}
       <div
