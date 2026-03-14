@@ -20,14 +20,14 @@ export default function Hiring() {
         {/* Section Header */}
         <div className="flex flex-col items-center gap-5 mb-16 max-w-[582px] mx-auto">
           {/* Hiring Badge */}
-          <div
-            className="inline-flex items-center px-5 py-2 rounded-full"
-            style={{
-              border: "1px solid rgba(255, 255, 255, 0.18)",
-              background: "transparent",
-            }}
-          >
-            <span className="font-inter text-sm font-medium text-white tracking-wide uppercase">
+          <div className="inline-flex items-center px-6 py-2 rounded-full border border-white/20 bg-white">
+            <span
+              className="text-[#0A0A0A] font-inter font-semibold tracking-widest uppercase"
+              style={{
+                fontSize: "13px",
+                letterSpacing: "0.12em",
+              }}
+            >
               We're Hiring
             </span>
           </div>
