@@ -25,47 +25,42 @@ export default function Contact() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{
-        background: "#07080A",
-        backgroundImage:
-          "url(https://cdn.builder.io/api/v1/image/assets%2F766559904cb240c09cbbee0e5843aa34%2Ff2b000152a864b3ea36cf3f326ddd7f7)",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
+      style={{ background: "#07080A" }}
     >
-      {/* Grid background image with radial gradient mask */}
+      {/* Full-section grid image with radial gradient mask (fades to dark at edges, visible in center) */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          mask: "radial-gradient(50% 48% at 50% 45.8%, rgba(0,0,0,0.80) 34.28%, rgba(0,0,0,0.10) 100%)",
-          WebkitMask:
+          maskImage:
+            "radial-gradient(50% 48% at 50% 45.8%, rgba(0,0,0,0.80) 34.28%, rgba(0,0,0,0.10) 100%)",
+          WebkitMaskImage:
             "radial-gradient(50% 48% at 50% 45.8%, rgba(0,0,0,0.80) 34.28%, rgba(0,0,0,0.10) 100%)",
         }}
       >
         <img
           src="https://cdn.builder.io/api/v1/image/assets%2F766559904cb240c09cbbee0e5843aa34%2F141c7cd4eef448edb7b61cbbe6893e4e?format=webp&width=1600"
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
           style={{ opacity: 0.23 }}
         />
       </div>
 
-      {/* Gradient glow at top — using exact Figma gradient image */}
+      {/* Gradient glow at top — exact Figma gradient image, full-width centered */}
       <div
-        className="absolute top-0 left-1/2 pointer-events-none"
+        className="absolute pointer-events-none"
         style={{
+          top: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
           width: "100%",
-          maxWidth: "1400px",
-          height: "600px",
-          transform: "translateX(-45%)",
+          maxWidth: "1440px",
+          height: "560px",
         }}
       >
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F766559904cb240c09cbbee0e5843aa34%2F5cd21d08fdab44ff94d3acefdbcac864?format=webp&width=1400"
+          src="https://cdn.builder.io/api/v1/image/assets%2F766559904cb240c09cbbee0e5843aa34%2F5cd21d08fdab44ff94d3acefdbcac864?format=webp&width=1440"
           alt=""
           className="w-full h-full object-cover object-top"
-          style={{ opacity: 1, position: "sticky" }}
         />
       </div>
 
