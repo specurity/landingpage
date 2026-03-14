@@ -1,15 +1,25 @@
 const blinkingDotStyle = `
   @keyframes blink {
-    0%, 50% {
+    0% {
       opacity: 1;
+      background-color: #0A0A0A;
     }
-    75%, 100% {
+    33% {
       opacity: 0.4;
+      background-color: #0A0A0A;
+    }
+    66% {
+      opacity: 0;
+      background-color: #2c72ff;
+    }
+    100% {
+      opacity: 1;
+      background-color: #2c72ff;
     }
   }
 
   .blinking-dot {
-    animation: blink 3s ease-in-out infinite;
+    animation: blink 2.5s ease-in-out infinite;
   }
 `;
 
@@ -38,7 +48,7 @@ export default function Hiring() {
         <div className="flex flex-col items-center gap-5 mb-16 max-w-[582px] mx-auto">
           {/* Hiring Badge */}
           <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-white/20 bg-white">
-            <div className="blinking-dot" style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#0A0A0A" }}></div>
+            <div className="blinking-dot" style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "#0A0A0A" }}></div>
             <span
               className="text-[#0A0A0A] font-inter font-semibold tracking-widest uppercase"
               style={{
