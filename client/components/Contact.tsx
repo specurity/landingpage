@@ -46,11 +46,12 @@ export default function Contact() {
 
       {/* Gradient glow at top — using exact Figma gradient image */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none"
+        className="absolute top-0 left-1/2 pointer-events-none"
         style={{
           width: "100%",
           maxWidth: "1400px",
           height: "600px",
+          transform: "translateX(-45%)",
         }}
       >
         <img
