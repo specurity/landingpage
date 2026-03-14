@@ -1,43 +1,37 @@
 export default function Partners() {
+  const avatars = [
+    "https://api.builder.io/api/v1/image/assets/TEMP/1c6a1dd2adb30d1e500528c039e522b469d21223?width=100",
+    "https://api.builder.io/api/v1/image/assets/TEMP/63fa17940481a8c69fb2afee179f88537a98f066?width=100",
+    "https://api.builder.io/api/v1/image/assets/TEMP/2e13c0651a3c9d728b221bc93825dddae93c569d?width=100",
+  ];
+
   return (
     <section className="relative py-24 px-8">
       <div className="max-w-[1216px] mx-auto">
-        {/* Section Badge */}
+        {/* Social Proof Badge */}
         <div className="flex justify-center mb-16">
-          <div 
-            className="relative flex items-center h-12"
-            style={{
-              background: "radial-gradient(50% 13.65% at 50% 50%, rgba(245, 48, 107, 0.10) 0%, rgba(255, 103, 167, 0.00) 100%)",
-            }}
-          >
-            {/* Left line */}
-            <svg width="272" height="2" viewBox="0 0 272 2" fill="none" className="shrink-0">
-              <path d="M272 1.00002L0.5 1" stroke="url(#paint0_linear_partners)" />
-              <defs>
-                <linearGradient id="paint0_linear_partners" x1="272.5" y1="1.49877" x2="0.500002" y2="0.999173" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#0076FF"/>
-                  <stop offset="0.165137" stopColor="#0076FF"/>
-                  <stop offset="1" stopColor="#07080A"/>
-                </linearGradient>
-              </defs>
-            </svg>
-
-            {/* Text */}
-            <div className="px-3">
-              <span className="text-sm font-medium text-white">Acknowledge By</span>
+          <div className="flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-sm">
+            {/* Overlapping Avatars */}
+            <div className="flex items-center">
+              {avatars.map((src, i) => (
+                <div
+                  key={i}
+                  className="w-8 h-8 rounded-full overflow-hidden border-2 border-[#07080A] bg-[#1a1b1e]"
+                  style={{ marginLeft: i === 0 ? 0 : "-10px", zIndex: avatars.length - i }}
+                >
+                  <img
+                    src={src}
+                    alt=""
+                    className="w-full h-full object-cover grayscale"
+                  />
+                </div>
+              ))}
             </div>
 
-            {/* Right line */}
-            <svg width="272" height="2" viewBox="0 0 272 2" fill="none" className="shrink-0">
-              <path d="M0 1H271.5" stroke="url(#paint1_linear_partners)" />
-              <defs>
-                <linearGradient id="paint1_linear_partners" x1="0" y1="1" x2="272" y2="1" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#0076FF"/>
-                  <stop offset="0.165137" stopColor="#0076FF"/>
-                  <stop offset="1" stopColor="#07080A"/>
-                </linearGradient>
-              </defs>
-            </svg>
+            {/* Text */}
+            <span className="font-inter text-sm font-medium text-white/80 whitespace-nowrap">
+              Acknowledge by 50+ Companies Globally
+            </span>
           </div>
         </div>
 
@@ -54,22 +48,15 @@ export default function Partners() {
               key={index}
               className="relative w-[230px] h-28 flex items-center justify-center rounded-2xl border border-white/15 overflow-hidden group hover:border-white/25 transition-all duration-300"
             >
-              {/* Overlay background */}
               <div
                 className="absolute inset-[1px] rounded-2xl pointer-events-none"
-                style={{
-                  background: "rgba(12, 13, 15, 0.40)",
-                }}
+                style={{ background: "rgba(12, 13, 15, 0.40)" }}
               />
-              {/* Logo */}
               <img
                 src={partner.url}
                 alt={partner.name}
                 className="relative z-10 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                style={{
-                  maxWidth: partner.width,
-                  maxHeight: partner.height,
-                }}
+                style={{ maxWidth: partner.width, maxHeight: partner.height }}
               />
             </div>
           ))}
