@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
 import Partners from "@/components/Partners";
 import MissionFeatures from "@/components/MissionFeatures";
 import AIFeatures from "@/components/AIFeatures";
@@ -16,7 +15,6 @@ export default function Index() {
       <Navigation />
       <main>
         <Hero />
-        <Features />
         <Partners />
         <MissionFeatures />
         <AIFeatures />
