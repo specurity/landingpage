@@ -1,15 +1,15 @@
 const blinkingDotStyle = `
   @keyframes blink {
-    0%, 49% {
+    0%, 50% {
       opacity: 1;
     }
-    50%, 100% {
-      opacity: 0.3;
+    75%, 100% {
+      opacity: 0.4;
     }
   }
 
   .blinking-dot {
-    animation: blink 1.5s infinite;
+    animation: blink 3s ease-in-out infinite;
   }
 `;
 
